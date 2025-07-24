@@ -1,0 +1,27 @@
+# Use the official Go image as a base image
+FROM golang:1.23-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Install dependencies
+RUN apk add --no-cache git gcc musl-dev
+
+# Copy the Go module files and download dependencies
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Copy the rest of the application source code
+COPY . .
+
+# Make the entrypoint script executable
+RUN chmod +x /app/DockerEntrypoint.sh
+
+# Build the application
+RUN go build -o /x-ui .
+
+# Expose the application port
+EXPOSE 54321
+
+# Set the entrypoint
+ENTRYPOINT ["/app/DockerEntrypoint.sh"]
