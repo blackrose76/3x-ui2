@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"xray-panel/services"
+	"xray-panel/app/controllers"
+	"xray-panel/app/services"
 )
 
 func main() {

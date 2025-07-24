@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"net/http"
-	"xray-panel/models"
+	"xray-panel/app/models"
 )
 
 type ServerController struct {

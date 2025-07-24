@@ -19,9 +19,8 @@ mkdir -p /opt/xray-panel
 cp -r . /opt/xray-panel/
 
 # Build the application
-cd /opt/xray-panel/app
+cd /opt/xray-panel
 go build -o xray-panel .
-mv xray-panel /opt/xray-panel/
 
 # Create the systemd service file
 cat > /etc/systemd/system/xray-panel.service << EOL
