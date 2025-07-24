@@ -10,7 +10,10 @@ fi
 apt-get update
 
 # Install dependencies
-apt-get install -y golang-go
+apt-get install -y wget
+wget https://go.dev/dl/go1.24.5.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.24.5.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
 
 # Create the application directory
 mkdir -p /opt/xray-panel
