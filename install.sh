@@ -24,7 +24,7 @@ cp -r . /opt/xray-panel/
 
 # Build the application
 cd /opt/xray-panel
-go build -o xray-panel .
+/usr/local/go/bin/go build -o xray-panel .
 
 # Create the systemd service file
 cat > /etc/systemd/system/xray-panel.service << EOL
