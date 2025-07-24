@@ -26,6 +26,7 @@ cp -r . /opt/xray-panel/
 cd /opt/xray-panel
 /usr/local/go/bin/go mod tidy
 /usr/local/go/bin/go build -o xray-panel .
+chmod +x xray-panel
 
 # Create the systemd service file
 cat > /etc/systemd/system/xray-panel.service << EOL
