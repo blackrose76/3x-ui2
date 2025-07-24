@@ -13,7 +13,8 @@ apt-get update
 apt-get install -y wget
 wget https://go.dev/dl/go1.24.5.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.24.5.linux-amd64.tar.gz
-export PATH=$PATH:/usr/local/go/bin
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
+source ~/.bashrc
 
 # Create the application directory
 mkdir -p /opt/xray-panel
