@@ -16,7 +16,7 @@ apt-get install -y golang-go
 mkdir -p /opt/xray-panel
 
 # Copy the application files
-cp -r app/* /opt/xray-panel/
+cp -r . /opt/xray-panel/
 
 # Build the application
 cd /opt/xray-panel
