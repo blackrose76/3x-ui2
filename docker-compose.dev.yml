@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  x-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "54321:54321"
+    volumes:
+      - .:/app
+    environment:
+      - XUI_DB_PATH=/app/database/x-ui.db
+      - XUI_LOG_LEVEL=debug
+      - CGO_ENABLED=1
